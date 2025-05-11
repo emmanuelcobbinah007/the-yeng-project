@@ -23,14 +23,14 @@ const CTASection = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="max-w-3xl mx-auto text-center"
       >
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Ready to Make a Difference?</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-blue-900">Ready to Make a Difference?</h2>
         <p className="text-md md:text-lg text-gray-600 mb-8">
           Be part of the movement. Volunteer, reach out, or share the message.
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <a
-            href="tel:+233XXXXXXXXX"
+            href="tel:+233550286040"
             className="bg-[#0F1F3D] text-white font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#1e2d50] transition duration-300"
           >
             <PhoneCall size={20} />
@@ -38,7 +38,7 @@ const CTASection = () => {
           </a>
 
           <a
-            href="https://forms.gle/your-volunteer-form"
+            href="https://form.jotform.com/251305881737057"
             target="_blank"
             className="bg-[#B51F2A] text-white font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#9e1b24] transition duration-300"
           >
@@ -47,7 +47,7 @@ const CTASection = () => {
           </a>
 
           <a
-            href="/assets/flyers/michael-yeng-flyer.pdf"
+            href="/assets/flyers/Michael-Yeng-Flyer.jpg"
             download
             className="border border-[#0F1F3D] text-[#0F1F3D] font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#0F1F3D] hover:text-white transition duration-300"
           >
