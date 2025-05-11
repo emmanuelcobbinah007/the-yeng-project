@@ -10,7 +10,7 @@ const PreFooter = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'top',
     }}>
-        <div className='w-[85%] mx-auto flex justify-between items-center py-20 text-white h-[75%] md:h-[80vh]'></div>
+        <div className='w-[85%] mx-auto flex justify-between items-center py-20 text-white h-[80%] md:h-[80vh]'></div>
     </div>
   )
 }
