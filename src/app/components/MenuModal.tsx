@@ -34,7 +34,7 @@ const MenuModal: React.FC<MenuModalProps> = ({ handleClose, animateModal }) => {
               { name: "The Man", id: "the-man" },
               { name: "The Drive", id: "the-drive" },
               { name: "The Agenda", id: "the-agenda" },
-              { name: "The Cause", id: "the-cause" },
+              { name: "Support Now", id: "get-involved" },
             ].map((item, idx) => (
               <li
                 key={idx}

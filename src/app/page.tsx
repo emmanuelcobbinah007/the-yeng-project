@@ -3,9 +3,9 @@ import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import VisionMission from "./components/VisionMission";
 import Priorities from "./components/Priorities";
+import CTASection from "./components/CTASection";
 import PreFooter from "./components/PreFooter";
 import Footer from "./components/Footer";
-import GetInvolved from "./components/GetInvolved";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
      <About />
      <VisionMission />
      <Priorities />
-     {/* <GetInvolved /> */}
+     <CTASection />
      <PreFooter />
      <Footer />
     </div>

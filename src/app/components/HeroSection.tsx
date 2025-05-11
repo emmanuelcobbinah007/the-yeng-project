@@ -41,9 +41,12 @@ const HeroSection = () => {
                 />
             </p>
 
-            <button className='bg-white text-black font-bold px-6 py-2 rounded-md mt-4 text-sm md:text-lg'>
+            <a 
+                href="#get-involved" 
+                className='bg-white text-black font-bold px-6 py-2 rounded-md mt-5 md:mt-2 text-sm md:text-lg block w-[60%] md:w-[40%] text-center duration-300 hover:scale-102 hover:bg-gray-200'
+            >
                 Join the Movement
-            </button>
+            </a>
             </div>
         </div>
     </div>

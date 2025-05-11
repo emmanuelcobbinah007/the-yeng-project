@@ -29,7 +29,7 @@ const Header = () => {
       {/* Banner Section */}
       <div className="bg-[#B51F2A] text-white">
         <div className="w-[85%] text-sm md:text-base mx-auto py-2 flex justify-center items-center font-extrabold">
-          <p>TEXT YENG TO 22839</p>
+          <p>VOTE YENG FOR UGSRC'25 PRESIDENT</p>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ const Header = () => {
           />
 
           {/* Desktop Navigation */}
-          <ul className={`hidden sm:flex gap-10 text-md md:text-lg font-semibold ${montserrat.className}`}>
+          <ul className={`hidden sm:flex gap-10 text-md md:text-lg font-semibold ${montserrat.className} items-center`}>
             <li className="relative group">
             <a
                   href="#the-man"
@@ -73,9 +73,18 @@ const Header = () => {
                 </a>
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </li>
-            <li className="relative group">
-              The Cause
-              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+            <li className="relative group bg-white text-[#0F1F3D] px-4 py-2 rounded-2xl font-semibold overflow-hidden cursor-pointer border-2 border-white">
+              <a
+                  href="#get-involved"
+                  className="block"
+                >
+              <span className="relative z-10">Support Now</span>
+              <div className="absolute rounded-xl inset-0 bg-[#0F1F3D] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <span className="absolute inset-0 text-white z-0 group-hover:z-10 transition-colors duration-300 flex justify-center items-center">
+              Support Now
+              </span>
+                <div className="absolute inset-0 rounded-xl border border-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            </a>
             </li>
           </ul>
 
