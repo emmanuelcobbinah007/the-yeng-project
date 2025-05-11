@@ -18,7 +18,7 @@ const HeroSection = () => {
             backgroundPosition: 'top',
         }}
     >
-        <div className='w-[85%] mx-auto flex justify-between items-center py-20 text-white h-[80vh]'>
+        <div className='w-[85%] mx-auto flex justify-between items-center py-20 text-white h-[82vh]'>
             <div className='pl-10 w-[50%]'>
             <h1 className={`text-6xl font-bold`}>
                 Michael Yeng
