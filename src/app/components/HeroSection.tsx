@@ -41,7 +41,7 @@ const HeroSection = () => {
                 />
             </p>
 
-            <button className='bg-white text-black font-bold px-6 py-2 rounded-md mt-4 text-sm md:text-md'>
+            <button className='bg-white text-black font-bold px-6 py-2 rounded-md mt-4 text-sm md:text-lg'>
                 Join the Movement
             </button>
             </div>
