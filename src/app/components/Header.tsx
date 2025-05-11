@@ -47,19 +47,34 @@ const Header = () => {
           {/* Desktop Navigation */}
           <ul className={`hidden sm:flex gap-10 text-md md:text-lg font-semibold ${montserrat.className}`}>
             <li className="relative group">
-              The Man
+            <a
+                  href="#the-man"
+                  className="block"
+                >
+                  The Man
+                </a>
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="relative group">
-              The Vision
+            <a
+                  href="#the-drive"
+                  className="block"
+                >
+                  The Drive
+                </a>
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="relative group">
-              The Experience
+            <a
+                  href="#the-agenda"
+                  className="block"
+                >
+                  The Agenda
+                </a>
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="relative group">
-              The Reason
+              The Cause
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
             </li>
           </ul>

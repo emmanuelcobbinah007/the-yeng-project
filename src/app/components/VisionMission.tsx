@@ -15,7 +15,7 @@ const fadeInUp = {
 
 const VisionMission = () => {
   return (
-    <section className="bg-blue-50 py-20 px-6">
+    <section id="the-drive" className="bg-blue-50 py-20 px-6">
       <div className="w-[85%] mx-auto">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         {/* What I Stand For */}

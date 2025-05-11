@@ -38,7 +38,7 @@ const priorities = [
 
 const Priorities = () => {
   return (
-    <section className="bg-white py-20 px-6">
+    <section id="the-agenda" className="bg-white py-20 px-6">
       <div className="w-[85%] mx-auto">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-4">

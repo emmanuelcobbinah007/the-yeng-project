@@ -30,17 +30,26 @@ const MenuModal: React.FC<MenuModalProps> = ({ handleClose, animateModal }) => {
         {/* Menu Items */}
         <div className="flex flex-col justify-center items-center h-[80%] p-6">
           <ul className="space-y-6 text-center">
-            {["The Man", "The Vision", "The Experience", "The Reason"].map(
-              (item, idx) => (
-                <li
-                  key={idx}
-                  className="text-xl font-semibold text-blue-900 hover:text-blue-700 transition-colors cursor-pointer relative group"
+            {[
+              { name: "The Man", id: "the-man" },
+              { name: "The Drive", id: "the-drive" },
+              { name: "The Agenda", id: "the-agenda" },
+              { name: "The Cause", id: "the-cause" },
+            ].map((item, idx) => (
+              <li
+                key={idx}
+                className="text-xl font-semibold text-blue-900 hover:text-blue-700 transition-colors cursor-pointer relative group"
+              >
+                <a
+                  href={`#${item.id}`}
+                  onClick={handleClose} // Close the modal after clicking
+                  className="block"
                 >
-                  {item}
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
-                </li>
-              )
-            )}
+                  {item.name}
+                </a>
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
+              </li>
+            ))}
           </ul>
         </div>
 
