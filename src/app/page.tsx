@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import VisionMission from "./components/VisionMission";
 import Priorities from "./components/Priorities";
+import PreFooter from "./components/PreFooter";
 import Footer from "./components/Footer";
 import GetInvolved from "./components/GetInvolved";
 
@@ -15,6 +16,7 @@ export default function Home() {
      <VisionMission />
      <Priorities />
      {/* <GetInvolved /> */}
+     <PreFooter />
      <Footer />
     </div>
   );
