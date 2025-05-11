@@ -1,48 +1,71 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
+"use client";
+
+import React from "react";
+import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 const VisionMission = () => {
   return (
     <section className="bg-blue-50 py-20 px-6">
+      <div className="w-[85%] mx-auto">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-        
         {/* What I Stand For */}
-        <div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
             What I Stand For
           </h2>
-          <ul className="space-y-5">
+          <ul className="space-y-4 text-gray-800">
             {[
-              "Empowerment Through Representation",
-              "Transparency and Accountability",
-              "Student Welfare First",
-              "Innovation in Student Services",
-              "A Listening Leadership"
+              "Empowered Students",
+              "Transparent Leadership",
+              "Better Campus Life",
+              "Fair Representation",
+              "Innovation & Progress",
             ].map((item, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <CheckCircle className="text-blue-700 w-6 h-6 mt-1" />
-                <span className="text-lg text-gray-700">{item}</span>
+                <CheckCircle className="text-blue-700 mt-1" size={20} />
+                <span className="text-lg">{item}</span>
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Mission Statement */}
-        <div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
             My Mission
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            My mission is simple — to amplify the voices of every student and
-            drive meaningful change across our campus. From ensuring affordable
-            services to creating better systems for student engagement, I believe
-            the UG SRC can become a platform that works for everyone, not just a few.
+            My mission is to build a responsive, student-centered SRC that
+            delivers real solutions. I’m committed to improving access to
+            resources, making our voices heard at every level of decision
+            making, and fostering a culture where every student thrives.
           </p>
 
-          <div className="mt-6 bg-blue-100 text-blue-900 px-6 py-4 rounded-xl text-center font-semibold text-xl">
-            Student First. Always.
+          <div className="mt-6 bg-blue-100 text-blue-800 p-4 rounded-xl text-center font-semibold shadow-inner">
+            “Student First. Always.”
           </div>
-        </div>
+        </motion.div>
+      </div>
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import React from 'react';
 const About = () => {
   return (
     <section className="bg-white py-20 px-6">
+      <div className='w-[85%] mx-auto'>
       <div className="max-w-4xl mx-auto relative text-center md:text-left">
         <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-10 text-center">
           Meet Michael
@@ -17,6 +18,7 @@ const About = () => {
             To achieve this, I’ll really need your support. Let’s build the UGSRC we all want to see!
           </p>
         </div>
+      </div>
       </div>
     </section>
   );
