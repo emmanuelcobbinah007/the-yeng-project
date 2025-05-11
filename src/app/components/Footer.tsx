@@ -9,20 +9,22 @@ const Footer = () => {
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Campaign Info with Logo */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-  <div className="flex items-center gap-3 mb-1">
-    <img
-      src={logoWhite.src}
-      alt="Campaign Logo"
-      className="w-12 h-12 md:w-10 md:h-10 object-contain"
-    />
-    <div className="flex flex-col items-start">
-      <h4 className="text-md md:text-lg lg:text-xl font-semibold">Michael Yeng for SRC President</h4>
-      <p className="text-xs md:text-sm text-gray-300">
-        © 2025 Yeng Campaign. All rights reserved.
-      </p>
-    </div>
-  </div>
-</div>
+          <div className="flex items-center gap-3 mb-1">
+            <img
+              src={logoWhite.src}
+              alt="Campaign Logo"
+              className="w-12 h-12 md:w-10 md:h-10 object-contain"
+            />
+            <div className="flex flex-col items-start">
+              <h4 className="text-md md:text-lg lg:text-xl font-semibold">
+                Michael Yeng for SRC President
+              </h4>
+              <p className="text-xs md:text-sm text-gray-300">
+                © 2025 Yeng Campaign. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* Socials */}
         <div className="flex gap-5 text-gray-300">

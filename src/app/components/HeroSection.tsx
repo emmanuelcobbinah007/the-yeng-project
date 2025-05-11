@@ -18,12 +18,12 @@ const HeroSection = () => {
             backgroundPosition: 'top',
         }}
     >
-        <div className='w-[85%] mx-auto flex justify-between items-center py-20 text-white h-[82vh]'>
-            <div className='pl-10 w-[50%]'>
-            <h1 className={`text-6xl font-bold`}>
+        <div className='w-[85%] mx-auto flex justify-between items-center py-20 text-white h-[75%] md:h-[82vh]'>
+            <div className='md:pl-10 w-[100%] md:w-[50%]'>
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold`}>
                 Michael Yeng
             </h1>
-            <p className='text-3xl text-gray-200 mt-4 leading-relaxed'>
+            <p className='text-md md:text-2xl lg:text-3xl text-gray-200 mt-2 md:mt-4 leading-relaxed'>
                 <TypeAnimation
                     sequence={[
                         "Evandy JCR President, 2024",
@@ -41,7 +41,7 @@ const HeroSection = () => {
                 />
             </p>
 
-            <button className='bg-white text-black font-bold px-6 py-2 rounded-md mt-4'>
+            <button className='bg-white text-black font-bold px-6 py-2 rounded-md mt-4 text-sm md:text-md'>
                 Join the Movement
             </button>
             </div>
