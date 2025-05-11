@@ -25,7 +25,7 @@ const VisionMission = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-900 mb-6">
             What I Stand For
           </h2>
           <ul className="space-y-4 text-gray-800">
@@ -38,7 +38,7 @@ const VisionMission = () => {
             ].map((item, idx) => (
               <li key={idx} className="flex items-start gap-3">
                 <CheckCircle className="text-blue-700 mt-1" size={20} />
-                <span className="text-lg">{item}</span>
+                <span className="text-md md:text-lg">{item}</span>
               </li>
             ))}
           </ul>
@@ -51,10 +51,10 @@ const VisionMission = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-900 mb-6">
             My Mission
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-md md:text-lg text-gray-700 leading-relaxed">
             My mission is to build a responsive, student-centered SRC that
             delivers real solutions. I’m committed to improving access to
             resources, making our voices heard at every level of decision

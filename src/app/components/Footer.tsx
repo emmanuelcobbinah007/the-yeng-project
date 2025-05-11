@@ -13,11 +13,11 @@ const Footer = () => {
     <img
       src={logoWhite.src}
       alt="Campaign Logo"
-      className="w-10 h-10 object-contain"
+      className="w-12 h-12 md:w-10 md:h-10 object-contain"
     />
     <div className="flex flex-col items-start">
-      <h4 className="text-lg font-semibold">Michael Yeng for SRC President</h4>
-      <p className="text-sm text-gray-300">
+      <h4 className="text-md md:text-lg lg:text-xl font-semibold">Michael Yeng for SRC President</h4>
+      <p className="text-xs md:text-sm text-gray-300">
         © 2025 Yeng Campaign. All rights reserved.
       </p>
     </div>
