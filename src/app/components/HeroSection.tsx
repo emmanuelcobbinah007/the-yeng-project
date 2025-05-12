@@ -43,7 +43,7 @@ const HeroSection = () => {
 
             <a 
                 href="#get-involved" 
-                className='bg-white text-black font-bold px-6 py-2 rounded-md mt-5 md:mt-2 text-sm md:text-lg block w-[60%] md:w-[40%] text-center duration-300 hover:scale-102 hover:bg-gray-200'
+                className="border border-white text-white font-semibold px-6 py-3 rounded-full flex justify-center items-center gap-2 hover:bg-white hover:text-[#0F1F3D] transition duration-300 text-xs md:text-lg w-[55%] md:w-[45%] mt-4 md:mt-6"
             >
                 Join the Movement
             </a>
