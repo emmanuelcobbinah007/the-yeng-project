@@ -30,6 +30,7 @@ const Footer = () => {
         <div className="flex gap-5 text-gray-300">
           <a
             href="https://www.instagram.com/mfyeng/"
+            target="_blank"
             aria-label="Instagram"
             className="hover:text-white"
           >
@@ -37,6 +38,7 @@ const Footer = () => {
           </a>
           <a
             href="https://x.com/itssmfy"
+            target="_blank"
             aria-label="X"
             className="hover:text-white"
           >
@@ -51,6 +53,7 @@ const Footer = () => {
           </a>
           <a
             href="https://www.linkedin.com/in/michael-anwar-16b454327/"
+            target="_blank"
             aria-label="LinkedIn"
             className="hover:text-white"
           >
