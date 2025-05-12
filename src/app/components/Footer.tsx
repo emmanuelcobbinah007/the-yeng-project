@@ -17,7 +17,7 @@ const Footer = () => {
             />
             <div className="flex flex-col items-start">
               <h4 className="text-md md:text-lg lg:text-xl font-semibold">
-                Michael Yeng for SRC President
+                Michael Yeng for UGSRC President
               </h4>
               <p className="text-xs md:text-sm text-gray-300">
                 © 2025 Yeng Campaign. All rights reserved.
@@ -60,7 +60,7 @@ const Footer = () => {
             <Linkedin size={20} />
           </a>
           <a
-            href="mailto:michaelyeng@example.com"
+            href="mailto:fareedyeng@gmail.com"
             aria-label="Email"
             className="hover:text-white"
           >
