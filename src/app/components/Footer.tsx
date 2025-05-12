@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-blue-950 text-white pt-10 px-6">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Campaign Info with Logo */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="w-[100%] flex flex-col items-center md:items-start text-center md:text-left">
           <div className="flex items-center gap-3 mb-1">
             <img
               src={logoWhite.src}
@@ -17,7 +17,7 @@ const Footer = () => {
             />
             <div className="flex flex-col items-start">
               <h4 className="text-md md:text-lg lg:text-xl font-semibold">
-                Michael Yeng for UGSRC President
+                Michael Yeng for SRC President
               </h4>
               <p className="text-xs md:text-sm text-gray-300">
                 © 2025 Yeng Campaign. All rights reserved.
