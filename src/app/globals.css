@@ -8,7 +8,7 @@ body {
   font-family: var(--font-poppins), sans-serif;
 }
 
-/* Add this to your global CSS file */
+
 .quote-block::before,
 .quote-block::after {
   content: '“';
@@ -26,7 +26,7 @@ body {
 
 .quote-block::before {
   top: -20px;
-  left: -10px;
+  left: -20px;
 }
 
 .quote-block::after {
