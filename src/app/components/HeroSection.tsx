@@ -19,16 +19,16 @@ const HeroSection = () => {
         }}
     >
         <div className='w-[85%] mx-auto flex justify-between items-center py-20 text-white h-[75%] md:h-[82vh]'>
-            <div className='md:pl-10 w-[100%] md:w-[50%]'>
+            <div className='md:pl-10 w-[100%] md:w-[60%]'>
             <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold`}>
                 Michael Yeng
             </h1>
-            <p className='text-md md:text-2xl lg:text-3xl text-gray-200 mt-2 md:mt-4 leading-relaxed'>
+            <p className='text-sm md:text-2xl lg:text-3xl text-gray-200 mt-2 md:mt-4 leading-relaxed'>
                 <TypeAnimation
                     sequence={[
                         "Evandy JCR President, 2024",
                         1500,
-                        "Top Delegate, Lifelink MUN 2024 (USA)",
+                        "Overall Best Delegate, Lifelink MUN 2024",
                         1500,
                         "UGSRC President, Hopeful 2025",
                         1500,
@@ -37,7 +37,7 @@ const HeroSection = () => {
                     speed={50}
                     cursor={true}
                     repeat={Infinity}
-                    className="font-medium"
+                    className=" font-medium"
                 />
             </p>
 

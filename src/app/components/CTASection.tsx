@@ -47,7 +47,7 @@ const CTASection = () => {
           </a>
 
           <a
-            href="/assets/flyers/Michael-Yeng-Flyer.jpg"
+            href="/assets/flyers/Michael-Yeng-For-UGSRC'25.jpg"
             download
             className="border border-[#0F1F3D] text-[#0F1F3D] font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-[#0F1F3D] hover:text-white transition duration-300"
           >
