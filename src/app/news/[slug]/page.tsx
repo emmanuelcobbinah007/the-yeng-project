@@ -12,7 +12,7 @@ interface SlugParams {
 }
 
 interface PageProps {
-  params: SlugParams;
+  params: string;
   searchParams: SearchParams;
 }
 
