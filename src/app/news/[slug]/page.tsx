@@ -2,12 +2,10 @@ import { notFound } from "next/navigation";
 import NewsContent from "../../components/NewsContent";
 import { newsData } from "../../types/news";
 import type { Metadata, ResolvingMetadata } from "next";
-import { type PageProps } from "next/types";
 
-type Props = PageProps & {
+type Props = {
   params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
+}
 
 export async function generateMetadata(
   { params }: Props,
