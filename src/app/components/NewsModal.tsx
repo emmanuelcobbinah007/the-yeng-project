@@ -6,7 +6,7 @@ import { X } from "lucide-react";
 
 import ShareModal from "./ShareModal";
 
-interface NewsItem {
+interface selectedNewsItem {
   id: string;
   imageSrc: string;
   title: string;
@@ -20,10 +20,10 @@ interface NewsItem {
 interface NewsModalProps {
   isOpen: boolean;
   onClose: () => void;
-  newsItem: NewsItem;
+  selectedNewsItem: selectedNewsItem;
 }
 
-const NewsModal: React.FC<NewsModalProps> = ({ isOpen, onClose, newsItem }) => {
+const NewsModal: React.FC<NewsModalProps> = ({ isOpen, onClose, selectedNewsItem }) => {
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
 
   return (
@@ -47,8 +47,8 @@ const NewsModal: React.FC<NewsModalProps> = ({ isOpen, onClose, newsItem }) => {
             {/* Header with close button */}
             <div className="relative">
               <img
-                src={newsItem.imageSrc}
-                alt={newsItem.title}
+                src={selectedNewsItem.imageSrc}
+                alt={selectedNewsItem.title}
                 className="w-full h-[400px] md:h-[600px] object-cover object-top rounded-t-lg"
               />
               <button
@@ -64,19 +64,19 @@ const NewsModal: React.FC<NewsModalProps> = ({ isOpen, onClose, newsItem }) => {
             <div className="p-6">
               <div className="mb-4">
                 <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-2">
-                  {newsItem.title}
+                  {selectedNewsItem.title}
                 </h2>
                 <p className="text-blue-600 text-sm font-medium">
-                  {newsItem.date}
+                  {selectedNewsItem.date}
                 </p>
               </div>
 
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  {newsItem.shortDescription}
+                  {selectedNewsItem.shortDescription}
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  {newsItem.fullStory}
+                  {selectedNewsItem.fullStory}
                 </p>
               </div>
 
@@ -99,9 +99,9 @@ const NewsModal: React.FC<NewsModalProps> = ({ isOpen, onClose, newsItem }) => {
         <ShareModal
           isOpen={isShareModalOpen}
           onClose={() => setIsShareModalOpen(false)}
-          title={newsItem.title}
-          description={newsItem.shortDescription}
-          slug={newsItem.slug}
+          title={selectedNewsItem.title}
+          description={selectedNewsItem.shortDescription}
+          slug={selectedNewsItem.slug}
         />
       )}
 

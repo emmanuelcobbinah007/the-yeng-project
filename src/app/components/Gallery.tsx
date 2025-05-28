@@ -31,7 +31,7 @@ interface NewsItem {
   shortDescription: string;
   fullStory: string;
   featured?: boolean;
-  slug?: string;
+  slug: string;
 }
 
 const newsData: NewsItem[] = [
@@ -324,7 +324,7 @@ const Gallery = () => {
         <NewsModal
           isOpen={isModalOpen}
           onClose={closeModal}
-          newsItem={selectedNews}
+          selectedNewsItem={selectedNews}
         />
       )}
     </section>
