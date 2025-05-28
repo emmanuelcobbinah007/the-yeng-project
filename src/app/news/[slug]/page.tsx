@@ -2,13 +2,15 @@ import { notFound } from "next/navigation";
 import NewsContent from "../../components/NewsContent";
 import { newsData } from "../../types/news";
 import type { Metadata, ResolvingMetadata } from "next";
+import { type PageProps } from "next/types";
 
-interface PageParams {
+type Props = PageProps & {
   params: { slug: string };
-}
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
 export async function generateMetadata(
-  { params }: PageParams ,
+  { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const newsItem = newsData.find((item) => item.slug === params.slug);
@@ -51,7 +53,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function NewsPage({ params }: { params: { slug: string } }) {
+export default function NewsPage({ params }: Props) {
   const newsItem = newsData.find((item) => item.slug === params.slug);
 
   if (!newsItem) {
