@@ -3,12 +3,12 @@ import NewsContent from "../../components/NewsContent";
 import { newsData } from "../../types/news";
 import type { Metadata, ResolvingMetadata } from "next";
 
-type PageParams = {
+interface PageParams {
   params: { slug: string };
 }
 
 export async function generateMetadata(
-  { params }: { params: { slug: string } },
+  { params }: PageParams ,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const newsItem = newsData.find((item) => item.slug === params.slug);
