@@ -1,8 +1,10 @@
 "use client";
 
-import React from "react";
+import React, {useState} from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+
+import ShareModal from "./ShareModal";
 
 interface NewsItem {
   id: string;
@@ -12,6 +14,7 @@ interface NewsItem {
   shortDescription: string;
   fullStory: string;
   featured?: boolean;
+  slug: string;
 }
 
 interface NewsModalProps {
@@ -21,6 +24,8 @@ interface NewsModalProps {
 }
 
 const NewsModal: React.FC<NewsModalProps> = ({ isOpen, onClose, newsItem }) => {
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -83,14 +88,23 @@ const NewsModal: React.FC<NewsModalProps> = ({ isOpen, onClose, newsItem }) => {
                 >
                   Close
                 </button>
-                <button className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+                <button onClick={() => {setIsShareModalOpen(!isShareModalOpen)}} className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
                   Share
                 </button>
               </div>
             </div>
           </motion.div>
         </motion.div>
+      )}      {isShareModalOpen && (
+        <ShareModal
+          isOpen={isShareModalOpen}
+          onClose={() => setIsShareModalOpen(false)}
+          title={newsItem.title}
+          description={newsItem.shortDescription}
+          slug={newsItem.slug}
+        />
       )}
+
     </AnimatePresence>
   );
 };

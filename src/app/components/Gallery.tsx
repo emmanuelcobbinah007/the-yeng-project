@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import NewsModal from "./NewsModal";
+import Link from "next/link";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -30,6 +31,7 @@ interface NewsItem {
   shortDescription: string;
   fullStory: string;
   featured?: boolean;
+  slug?: string;
 }
 
 const newsData: NewsItem[] = [
@@ -43,6 +45,7 @@ const newsData: NewsItem[] = [
     fullStory:
       "Today marks a pivotal moment in our campaign as we unveil a comprehensive campus initiative designed to revolutionize student life at the University of Ghana. This initiative encompasses sustainable practices, enhanced recreational facilities, and improved academic support systems. Through collaborative efforts with faculty, staff, and fellow students, we aim to create an environment where every student can thrive academically and personally. The plan includes new green spaces, upgraded technology infrastructure, and expanded mental health resources.",
     featured: true,
+    slug: "new-campus-initiative-announced",
   },
   {
     id: "2",
@@ -54,6 +57,7 @@ const newsData: NewsItem[] = [
     fullStory:
       "Our recent student town hall meeting exceeded all expectations with over 500 students in attendance, representing the largest student gathering in recent years. Students voiced their concerns about academic resources, campus security, dining options, and recreational facilities. We presented detailed action plans addressing each concern, including proposals for extended library hours, enhanced security measures, improved meal plans, and new sports facilities. The overwhelming positive response and constructive feedback received will directly influence our policy implementations.",
     featured: true,
+    slug: "student-town-hall-meeting-success",
   },
   {
     id: "3",
@@ -64,7 +68,8 @@ const newsData: NewsItem[] = [
       "Students unite for community service, making a real difference in local neighborhoods.",
     fullStory:
       "This weekend's community volunteer drive showcased the incredible spirit of University of Ghana students as over 200 volunteers participated in various community service projects. Activities included environmental cleanup, tutoring local children, supporting elderly community members, and assisting in local food distribution programs. This initiative demonstrates our commitment to being responsible global citizens and making a positive impact beyond our campus boundaries.",
-      featured: true,
+    featured: true,
+    slug: "community-volunteer-drive-success",
   },
   {
     id: "4",
@@ -75,6 +80,7 @@ const newsData: NewsItem[] = [
       "Cutting-edge technology center opens to support student entrepreneurship and innovation.",
     fullStory:
       "The new Innovation Tech Hub represents a significant investment in student success and technological advancement. Equipped with state-of-the-art computers, 3D printers, virtual reality systems, and collaborative workspaces, this facility will serve as a catalyst for student innovation and entrepreneurship. The hub will host workshops, hackathons, and mentorship programs connecting students with industry professionals and successful alumni.",
+    slug: "innovation-tech-hub-launch",
   },
   {
     id: "5",
@@ -85,6 +91,7 @@ const newsData: NewsItem[] = [
       "Exciting competition and sportsmanship displayed at the annual sports festival.",
     fullStory:
       "The annual inter-hall sports festival concluded with unprecedented participation and enthusiasm. Over 1,000 students competed in various sporting events including football, basketball, volleyball, track and field, and traditional games. The festival not only promoted physical fitness and healthy competition but also strengthened bonds between different halls and created lasting friendships across campus.",
+    slug: "inter-hall-sports-festival-highlights",
   },
   {
     id: "6",
@@ -95,6 +102,7 @@ const newsData: NewsItem[] = [
       "A vibrant celebration showcasing the rich cultural diversity of our student body.",
     fullStory:
       "Our cultural night celebration was a spectacular showcase of the diverse backgrounds and traditions that make our university community so vibrant. Students from different regions and countries presented traditional dances, music, fashion, and cuisine. The event fostered cross-cultural understanding and appreciation while creating an inclusive environment where every student feels valued and represented.",
+    slug: "cultural-night-celebration",
   },
 ];
 
@@ -102,7 +110,8 @@ const Gallery = () => {
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (newsItem: NewsItem) => {
+  const openModal = (e: React.MouseEvent, newsItem: NewsItem) => {
+    e.preventDefault();
     setSelectedNews(newsItem);
     setIsModalOpen(true);
   };
@@ -169,11 +178,11 @@ const Gallery = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {" "}
             {featuredNews.map((item) => (
+              <Link href={`/news/${item.slug}`} key={item.id}>
               <motion.div
-            key={item.id}
             variants={imageVariant}
             className="relative overflow-hidden rounded-lg shadow-lg group md:h-[500px] cursor-pointer bg-gray-200"
-            onClick={() => openModal(item)}
+            onClick={(e) => openModal(e, item)}
               >
             <img
               src={item.imageSrc}
@@ -200,6 +209,7 @@ const Gallery = () => {
               </p>
             </div>
               </motion.div>
+              </Link>
             ))}
           </div>
         </motion.div>
@@ -211,41 +221,42 @@ const Gallery = () => {
             <Slider {...sliderSettings} className="featured-news-slider">
               {featuredNews.map((item) => (
                 <div key={item.id} className="px-2">
-                  {" "}
-                  <motion.div
-                    variants={imageVariant}
-                    className="relative overflow-hidden rounded-lg shadow-lg group h-96 cursor-pointer bg-gray-200"
-                    onClick={() => openModal(item)}
-                  >
-                    <img
-                      src={item.imageSrc}
-                      alt={item.title}
-                      className=" w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
-                      onError={(e) => {
-                        console.error(
-                          `Failed to load featured image: ${item.imageSrc}`
-                        );
-                        e.currentTarget.style.display = "none";
-                      }}
-                      onLoad={() =>
-                        console.log(
-                          `Successfully loaded featured: ${item.imageSrc}`
-                        )
-                      }
-                    />
-                    {/* Hover Overlay for Featured News */}
-                    <div className="absolute inset-0 bg-black/50 bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 ease-in-out flex flex-col justify-end p-6">
-                      <h3 className="text-white text-2xl font-semibold opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-300 text-lg opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
-                        {item.shortDescription}
-                      </p>
-                      <p className="text-blue-300 text-sm mt-2 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-150">
-                        {item.date}
-                      </p>
-                    </div>
-                  </motion.div>
+                  <Link href={`/news/${item.slug}`}>
+                    <motion.div
+                      variants={imageVariant}
+                      className="relative overflow-hidden rounded-lg shadow-lg group h-96 cursor-pointer bg-gray-200"
+                      onClick={(e) => openModal(e, item)}
+                    >
+                      <img
+                        src={item.imageSrc}
+                        alt={item.title}
+                        className=" w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+                        onError={(e) => {
+                          console.error(
+                            `Failed to load featured image: ${item.imageSrc}`
+                          );
+                          e.currentTarget.style.display = "none";
+                        }}
+                        onLoad={() =>
+                          console.log(
+                            `Successfully loaded featured: ${item.imageSrc}`
+                          )
+                        }
+                      />
+                      {/* Hover Overlay for Featured News */}
+                      <div className="absolute inset-0 bg-black/50 bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 ease-in-out flex flex-col justify-end p-6">
+                        <h3 className="text-white text-2xl font-semibold opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-300 text-lg opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                          {item.shortDescription}
+                        </p>
+                        <p className="text-blue-300 text-sm mt-2 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-150">
+                          {item.date}
+                        </p>
+                      </div>
+                    </motion.div>
+                  </Link>
                 </div>
               ))}
             </Slider>
@@ -265,37 +276,39 @@ const Gallery = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {" "}
             {regularNews.map((item) => (
-              <motion.div
-                key={item.id}
-                variants={imageVariant}
-                className="relative overflow-hidden rounded-lg shadow-lg group md:h-[500px] cursor-pointer bg-gray-200"
-                onClick={() => openModal(item)}
-              >
-                <img
-                  src={item.imageSrc}
-                  alt={item.title}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
-                  onError={(e) => {
-                    console.error(`Failed to load image: ${item.imageSrc}`);
-                    e.currentTarget.style.display = "none";
-                  }}
-                  onLoad={() =>
-                    console.log(`Successfully loaded: ${item.imageSrc}`)
-                  }
-                />
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-black/50 bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 ease-in-out flex flex-col justify-end p-4">
-                  <h3 className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
-                    {item.shortDescription}
-                  </p>
-                  <p className="text-blue-300 text-xs mt-1 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-150">
-                    {item.date}
-                  </p>
-                </div>
-              </motion.div>
+              <Link href={`/news/${item.slug}`} key={item.id}>
+                <motion.div
+                  key={item.id}
+                  variants={imageVariant}
+                  className="relative overflow-hidden rounded-lg shadow-lg group md:h-[500px] cursor-pointer bg-gray-200"
+                  onClick={(e) => openModal(e, item)}
+                >
+                  <img
+                    src={item.imageSrc}
+                    alt={item.title}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${item.imageSrc}`);
+                      e.currentTarget.style.display = "none";
+                    }}
+                    onLoad={() =>
+                      console.log(`Successfully loaded: ${item.imageSrc}`)
+                    }
+                  />
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-black/50 bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 ease-in-out flex flex-col justify-end p-4">
+                    <h3 className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                      {item.shortDescription}
+                    </p>
+                    <p className="text-blue-300 text-xs mt-1 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-150">
+                      {item.date}
+                    </p>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
           
