@@ -3,18 +3,12 @@ import NewsContent from "../../components/NewsContent";
 import { newsData } from "../../types/news";
 import type { Metadata, ResolvingMetadata } from "next";
 
-type Props = {
+type PageParams = {
   params: { slug: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
-
-type GenerateMetadataProps = {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 export async function generateMetadata(
-  { params }: GenerateMetadataProps,
+  { params }: { params: { slug: string } },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const newsItem = newsData.find((item) => item.slug === params.slug);
@@ -57,7 +51,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function NewsPage({ params, searchParams }: Props) {
+export default function NewsPage({ params }: { params: { slug: string } }) {
   const newsItem = newsData.find((item) => item.slug === params.slug);
 
   if (!newsItem) {
