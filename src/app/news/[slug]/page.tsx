@@ -5,16 +5,17 @@ import type { Metadata, ResolvingMetadata } from "next/types";
 import Link from "next/link";
 
 type PageParams = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export async function generateMetadata(
   { params }: PageParams,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const newsItem = newsData.find((item) => item.slug === params.slug);
+  const { slug } = await params;
+  const newsItem = newsData.find((item) => item.slug === slug);
 
   if (!newsItem) {
     return {
@@ -55,7 +56,8 @@ export async function generateStaticParams() {
 }
 
 export default async function NewsPage({ params }: PageParams) {
-  const newsItem = newsData.find((item) => item.slug === params.slug);
+  const { slug } = await params;
+  const newsItem = newsData.find((item) => item.slug === slug);
 
   if (!newsItem) {
     notFound();
