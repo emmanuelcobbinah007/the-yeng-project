@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import NewsContent from "../../components/NewsContent";
 import { newsData } from "../../types/news";
-import type { Metadata, ResolvingMetadata } from "next";
+import ResolvingMetadata from "next";
+import Metadata from "next";
 import Link from "next/link";
 
 type PageParams = {
