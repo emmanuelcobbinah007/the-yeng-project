@@ -2,16 +2,14 @@ import { notFound } from "next/navigation";
 import NewsContent from "../../components/NewsContent";
 import { newsData } from "../../types/news";
 import type { Metadata, ResolvingMetadata } from "next";
-import Link from "next/link";
 
-type PageParams = {
-  params: {
-    slug: string;
-  };
+type PageProps = {
+  params: { slug: string };
+  searchParams?: Record<string, string | string[] | undefined>;
 };
 
 export async function generateMetadata(
-  { params }: PageParams,
+  { params }: PageProps,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const newsItem = newsData.find((item) => item.slug === params.slug);
@@ -54,12 +52,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function NewsPage({ params }: PageParams) {
+export default function NewsPage({ params }: PageProps) {
   const newsItem = newsData.find((item) => item.slug === params.slug);
 
   if (!newsItem) {
     notFound();
   }
+
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <NewsContent 
