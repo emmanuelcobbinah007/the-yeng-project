@@ -8,7 +8,7 @@ type SitemapEntry = {
 }
 
 export default function sitemap(): SitemapEntry[] {
-  const baseUrl = 'https://the-yeng-project.vercel.app'
+  const baseUrl = 'www.michaelyeng.com'
   // Static pages
   const staticPages = [
     {
