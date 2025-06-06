@@ -22,6 +22,12 @@ const staggerChildren = {
   },
 };
 
+// Utility function to convert Markdown links to HTML
+const parseMarkdownLinks = (text: string): string => {
+  // Match Markdown links: [text](url)
+  return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline font-medium">$1</a>');
+};
+
 interface NewsContentProps {
   title: string;
   date: string;
@@ -44,7 +50,7 @@ const NewsContent: React.FC<NewsContentProps> = ({
       >        {/* Hero Image */}
         <motion.div 
           variants={fadeInUp}
-          className="relative h-[250px] sm:h-[500px] lg:h-[650px] xl:h-[700px] 2xl:h-[750px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg"
+          className="relative h-[400px] sm:h-[500px] lg:h-[650px] xl:h-[700px] 2xl:h-[750px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg"
         >
           <img
             src={imageSrc}
@@ -66,9 +72,7 @@ const NewsContent: React.FC<NewsContentProps> = ({
             <div className="h-1 w-12 bg-blue-600 rounded"></div>
             <p className="text-sm sm:text-base text-gray-500 font-medium">{date}</p>
           </div>
-        </motion.div>
-
-        {/* Article Content */}
+        </motion.div>        {/* Article Content */}
         <motion.div
           variants={fadeInUp}
           className="prose prose-sm sm:prose-base lg:prose-lg max-w-none 
@@ -82,7 +86,7 @@ const NewsContent: React.FC<NewsContentProps> = ({
                      [&>h1]:text-xl sm:[&>h1]:text-2xl lg:[&>h1]:text-3xl
                      [&>h2]:text-lg sm:[&>h2]:text-xl lg:[&>h2]:text-2xl
                      [&>h3]:text-base sm:[&>h3]:text-lg lg:[&>h3]:text-xl"
-          dangerouslySetInnerHTML={{ __html: content }}
+          dangerouslySetInnerHTML={{ __html: parseMarkdownLinks(content.replace(/\n/g, '<br />')) }}
         />
 
         {/* Back to News Link */}

@@ -13,38 +13,40 @@ export const newsData: NewsItem[] = [
   {
     id: "1",
     imageSrc: "/assets/images/agenda/agenda1.jpg",
-    title: "New Campus Initiative Announced",
-    date: "May 20, 2025",
+    title: "🌟 We Go Again! MICHAEL YENG WELCOMES YOU BACK TO SCHOOL!🎒",
+    date: "June 6, 2025",
     shortDescription:
-      "A comprehensive plan to transform campus sustainability and student experience.",
+      "A new semester brings new goals, growth, and unforgettable memories. Let's make it count!",
     fullStory:
-      "Today marks a pivotal moment in our campaign as we unveil a comprehensive campus initiative designed to revolutionize student life at the University of Ghana. This initiative encompasses sustainable practices, enhanced recreational facilities, and improved academic support systems. Through collaborative efforts with faculty, staff, and fellow students, we aim to create an environment where every student can thrive academically and personally. The plan includes new green spaces, upgraded technology infrastructure, and expanded mental health resources.",
+      "A new semester means new goals, new growth, and new memories. Let's make it count! 💪✨ Wishing you success, strength, and an amazing journey ahead. Whether you're returning with big dreams or fresh plans, I encourage you to embrace every opportunity and challenge that comes your way.\n\nEnjoy the experience and make this semester one to remember! 🌟\n\nBest Regards,\nMichael Yeng ✨",
     featured: true,
-    slug: "new-campus-initiative-announced",
+    slug: "welcome-back-message-june-2025",
   },
   {
     id: "2",
     imageSrc: "/assets/images/agenda/agenda2.jpg",
-    title: "Student Town Hall Meeting Success",
-    date: "May 15, 2025",
+    title:
+      "🎥 Michael Yeng’s Journey to Leadership 🌟 A Day in the Life of a UGSRC Hopeful",
+    date: "June 6, 2025",
     shortDescription:
-      "Record attendance at our recent town hall discussing student concerns and solutions.",
+      "Go behind the scenes with Michael Yeng — vision, grit, and purpose on full display. 🎯👣",
     fullStory:
-      "Our recent student town hall meeting exceeded all expectations with over 500 students in attendance, representing the largest student gathering in recent years. Students voiced their concerns about academic resources, campus security, dining options, and recreational facilities. We presented detailed action plans addressing each concern, including proposals for extended library hours, enhanced security measures, improved meal plans, and new sports facilities. The overwhelming positive response and constructive feedback received will directly influence our policy implementations.",
+      `Ever wondered what drives a true student leader? 🧭💼 Dive into a day in the life of Michael Yeng — Hall President of Evandy Hall and UGSRC presidential hopeful — as he shares his journey, the values that guide him, and the real work it takes to represent students with purpose.\n\nFrom early morning meetings to late-night reflections, this video offers a raw and inspiring look at leadership in action. If you’ve ever doubted what commitment looks like, this is it.\n\n📺 Watch the full video here: [https://youtu.be/GVnLqOLCozw?si=b9Js8HKETsRp6sEs](https://youtu.be/GVnLqOLCozw?si=b9Js8HKETsRp6sEs)\n\n🔥 Don’t just support a candidate — understand the journey.\n\nBest Regards,\nMichael Yeng`,
     featured: true,
-    slug: "student-town-hall-meeting-success",
+    slug: "michael-yeng-journey-to-leadership",
   },
   {
     id: "3",
     imageSrc: "/assets/images/agenda/agenda6.jpg",
-    title: "Community Volunteer Drive Success",
-    date: "May 10, 2025",
+    title:
+      "🚐 MICHAEL YENG ENGAGES CAMPUS TRANSPORT UNIONS OVER FARE CONCERNS 💬",
+    date: "June 6, 2025",
     shortDescription:
-      "Students unite for community service, making a real difference in local neighborhoods.",
+      "Michael Yeng petitions transport unions in response to rising student concerns about fare prices. 🎓💸",
     fullStory:
-      "This weekend's community volunteer drive showcased the incredible spirit of University of Ghana students as over 200 volunteers participated in various community service projects. Activities included environmental cleanup, tutoring local children, supporting elderly community members, and assisting in local food distribution programs. This initiative demonstrates our commitment to being responsible global citizens and making a positive impact beyond our campus boundaries.",
+      "🚨 In direct response to growing student concerns over transport fare prices, Michael Yeng has officially petitioned the various transport unions operating on campus.\n\n🤝 After thorough deliberations and meaningful negotiations, the unions agreed to the proposal—bringing us one step closer to fair and affordable transport for all students.\n\n🙏 Students are encouraged to remain calm and hopeful as we await new developments in the coming days.\n\n📢 To Stay Updated, Stay Informed! 🗞️✨\n\nBest Regards,\nMichael Yeng",
     featured: true,
-    slug: "community-volunteer-drive-success",
+    slug: "transport-fare-negotiations",
   },
   {
     id: "4",

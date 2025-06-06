@@ -6,6 +6,12 @@ import { X } from "lucide-react";
 
 import ShareModal from "./ShareModal";
 
+// Utility function to convert Markdown links to HTML
+const parseMarkdownLinks = (text: string): string => {
+  // Match Markdown links: [text](url)
+  return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline font-medium">$1</a>');
+};
+
 interface selectedNewsItem {
   id: string;
   imageSrc: string;
@@ -69,15 +75,16 @@ const NewsModal: React.FC<NewsModalProps> = ({ isOpen, onClose, selectedNewsItem
                 <p className="text-blue-600 text-sm font-medium">
                   {selectedNewsItem.date}
                 </p>
-              </div>
-
-              <div className="prose prose-lg max-w-none">
+              </div>              <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-4">
                   {selectedNewsItem.shortDescription}
                 </p>
-                <p className="text-gray-700 leading-relaxed">
-                  {selectedNewsItem.fullStory}
-                </p>
+                <div 
+                  className="text-gray-700 leading-relaxed"
+                  dangerouslySetInnerHTML={{ 
+                    __html: parseMarkdownLinks(selectedNewsItem.fullStory.replace(/\n/g, '<br />'))
+                  }}
+                />
               </div>
 
               {/* Action buttons */}

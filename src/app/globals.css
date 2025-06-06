@@ -4,12 +4,15 @@
 
 html {
   scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 body {
   font-family: var(--font-poppins), sans-serif;
+  /* Hide scrollbar for webkit browsers */
+  overflow-x: hidden;
 }
-
 
 .quote-block::before,
 .quote-block::after {
@@ -71,4 +74,31 @@ body {
 
 .featured-news-slider .slick-list {
   margin: 0 -8px;
+}
+
+/* Hide scrollbar for all browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body {
+  font-family: var(--font-poppins), sans-serif;
+  /* Hide scrollbar for webkit browsers */
+  overflow-x: hidden;
+}
+
+/* Ensure smooth scrolling still works */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }

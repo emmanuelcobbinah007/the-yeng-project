@@ -3,7 +3,7 @@ import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import VisionMission from "./components/VisionMission";
 import Priorities from "./components/Priorities";
-import Gallery from "./components/Gallery";
+import Gallery from "./components/Gallery_new";
 import CTASection from "./components/CTASection";
 import PreFooter from "./components/PreFooter";
 import Footer from "./components/Footer";
