@@ -32,7 +32,7 @@ export const newsData: NewsItem[] = [
       "Go behind the scenes with Michael Yeng — vision, grit, and purpose on full display. 🎯👣",
     fullStory:
       `Ever wondered what drives a true student leader? 🧭💼 Dive into a day in the life of Michael Yeng — Hall President of Evandy Hall and UGSRC presidential hopeful — as he shares his journey, the values that guide him, and the real work it takes to represent students with purpose.\n\nFrom early morning meetings to late-night reflections, this video offers a raw and inspiring look at leadership in action. If you’ve ever doubted what commitment looks like, this is it.\n\n📺 Watch the full video here: [https://youtu.be/GVnLqOLCozw?si=b9Js8HKETsRp6sEs](https://youtu.be/GVnLqOLCozw?si=b9Js8HKETsRp6sEs)\n\n🔥 Don’t just support a candidate — understand the journey.\n\nBest Regards,\nMichael Yeng`,
-    featured: true,
+    featured: false,
     slug: "michael-yeng-journey-to-leadership",
   },
   {
@@ -62,13 +62,14 @@ export const newsData: NewsItem[] = [
   {
     id: "5",
     imageSrc: "/assets/images/agenda/agenda5.jpg",
-    title: "Inter-Hall Sports Festival Highlights",
-    date: "April 28, 2025",
-    shortDescription:
-      "Exciting competition and sportsmanship displayed at the annual sports festival.",
-    fullStory:
-      "The annual inter-hall sports festival concluded with unprecedented participation and enthusiasm. Over 1,000 students competed in various sporting events including football, basketball, volleyball, track and field, and traditional games. The festival not only promoted physical fitness and healthy competition but also strengthened bonds between different halls and created lasting friendships across campus.",
-    slug: "inter-hall-sports-festival-highlights",
+    title: "🎙️ MICHAEL YENG FEATURED ON 3MUSIC TV 💫",
+  date: "June 6, 2025",
+  shortDescription:
+    "Michael Yeng shares his story, vision, and values in a powerful 3Music TV interview. 📺✨",
+  fullStory:
+    "🔰 UGSRC Presidential Candidate Michael Yeng recently made an inspiring appearance on 3Music TV, where he engaged viewers with insight, energy, and purpose. The feature provided a platform for Michael to connect with students across the nation and share what truly drives his campaign.\n\n🎯 Key Highlights from the Interview:\n\n• His journey as Evandy Hall President – Michael reflected on his leadership milestones and his unwavering commitment to student-focused progress.\n\n• His bold vision for the UGSRC – From inclusive leadership to building systems that empower students, he laid out a clear and compelling roadmap for the future.\n\n🌟 It was more than just an interview — it was a testament to real leadership in motion.\n\n🎥 Stay tuned for more appearances and media engagements.\n\nBest Regards,\nTEAM YENG ❤️🎉",
+  featured: true,
+  slug: "michael-yeng-3music-tv-feature",
   },
   {
     id: "6",
