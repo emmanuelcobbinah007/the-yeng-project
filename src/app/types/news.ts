@@ -14,7 +14,7 @@ export const newsData: NewsItem[] = [
     id: "1",
     imageSrc: "/assets/images/agenda/agenda1.jpg",
     title: "🌟 We Go Again! MICHAEL YENG WELCOMES YOU BACK TO SCHOOL!🎒",
-    date: "June 6, 2025",
+    date: "June 1, 2025",
     shortDescription:
       "A new semester brings new goals, growth, and unforgettable memories. Let's make it count!",
     fullStory:
@@ -27,7 +27,7 @@ export const newsData: NewsItem[] = [
     imageSrc: "/assets/images/agenda/agenda2.jpg",
     title:
       "🎥 Michael Yeng’s Journey to Leadership 🌟 A Day in the Life of a UGSRC Hopeful",
-    date: "June 6, 2025",
+    date: "June 2, 2025",
     shortDescription:
       "Go behind the scenes with Michael Yeng — vision, grit, and purpose on full display. 🎯👣",
     fullStory:
@@ -40,7 +40,7 @@ export const newsData: NewsItem[] = [
     imageSrc: "/assets/images/agenda/agenda6.jpg",
     title:
       "🚐 MICHAEL YENG ENGAGES CAMPUS TRANSPORT UNIONS OVER FARE CONCERNS 💬",
-    date: "June 6, 2025",
+    date: "May 30, 2025",
     shortDescription:
       "Michael Yeng petitions transport unions in response to rising student concerns about fare prices. 🎓💸",
     fullStory:
@@ -51,13 +51,14 @@ export const newsData: NewsItem[] = [
   {
     id: "4",
     imageSrc: "/assets/images/agenda/agenda4.jpg",
-    title: "Innovation Tech Hub Launch",
-    date: "May 5, 2025",
-    shortDescription:
-      "Cutting-edge technology center opens to support student entrepreneurship and innovation.",
-    fullStory:
-      "The new Innovation Tech Hub represents a significant investment in student success and technological advancement. Equipped with state-of-the-art computers, 3D printers, virtual reality systems, and collaborative workspaces, this facility will serve as a catalyst for student innovation and entrepreneurship. The hub will host workshops, hackathons, and mentorship programs connecting students with industry professionals and successful alumni.",
-    slug: "innovation-tech-hub-launch",
+     title: "🧼 MICHAEL YENG SUPPORTS BUZSTOP BOYS WITH DONATION 🎁",
+  date: "March 31, 2025",
+  shortDescription:
+    "Michael Yeng donated branded items to the Buzstop Boys during a cleanup exercise at Okponglo Junction. A show of solidarity and community impact. 💪🏽",
+  fullStory:
+    "🌟 Earlier today, UGSRC Presidential Hopeful and Evandy JCR President, Michael Yeng, joined the Buzstop Boys during their community cleanup exercise at Okponglo Junction.\n\n🎁 As part of the activity, Michael donated branded items in support of their efforts — a gesture that reflects his commitment to grassroots initiatives and student-led impact.\n\n🧼 The cleanup wasn’t just about sanitation; it was a celebration of civic responsibility, collaboration, and the power of young people taking charge of their environment.\n\n👏🏽 Michael’s presence and support reinforced his campaign's message of action, inclusion, and community-first leadership.\n\nBest Regards,\nTEAM YENG ❤️🌍",
+  featured: false,
+  slug: "michael-yeng-donates-to-buzstop-boys",
   },
   {
     id: "5",
@@ -74,12 +75,13 @@ export const newsData: NewsItem[] = [
   {
     id: "6",
     imageSrc: "/assets/images/agenda/agenda3.jpg",
-    title: "Cultural Night Celebration",
-    date: "April 22, 2025",
-    shortDescription:
-      "A vibrant celebration showcasing the rich cultural diversity of our student body.",
-    fullStory:
-      "Our cultural night celebration was a spectacular showcase of the diverse backgrounds and traditions that make our university community so vibrant. Students from different regions and countries presented traditional dances, music, fashion, and cuisine. The event fostered cross-cultural understanding and appreciation while creating an inclusive environment where every student feels valued and represented.",
-    slug: "cultural-night-celebration",
+     title: "🌙 MICHAEL YENG CELEBRATES EID WITH GMSA 🤝",
+  date: "June 6, 2025",
+  shortDescription:
+    "Michael Yeng joined GMSA to celebrate Eid, promote unity, and support the community with heartfelt donations. 🌟",
+  fullStory:
+    "🌙 This Eid, UGSRC Presidential Candidate Michael Yeng celebrated with the Ghana Muslim Students Association (GMSA), marking the special occasion with a spirit of unity, gratitude, and generosity.\n\n🎁 As part of the celebration, Michael donated essential items to support the community, underscoring his belief in inclusive leadership that embraces all students — regardless of faith or background.\n\n🙏🏽 The event was a heartwarming reminder of the values that bind us: compassion, faith, and service to one another.\n\n💬 'A leader for all' isn't just a slogan — it's a principle Michael lives by.\n\nBest Regards,\nTEAM YENG ❤️🌟",
+  featured: false,
+  slug: "michael-yeng-eid-celebration-gmsa",
   },
 ];
