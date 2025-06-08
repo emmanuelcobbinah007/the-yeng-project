@@ -9,17 +9,21 @@ const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '600', '900'
 
 import HeroImg from '../../../public/assets/images/HeroImg.jpg'
 
-const HeroSection = () => {
-  return (
+const HeroSection = () => {  return (
     <section
         aria-label="Hero section featuring Michael Yeng"
-        style={{
-            backgroundImage: `url(${HeroImg.src})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'top',
-        }}
+        className="relative overflow-hidden"
     >
-        <div className='w-[85%] mx-auto flex justify-between items-center py-20 text-white h-[75%] md:h-[82vh]'>
+        <Image
+            src={HeroImg}
+            alt="Michael Yeng campaign hero background"
+            fill
+            priority
+            quality={85}
+            sizes="100vw"
+            className="object-cover object-top"
+        />
+        <div className='w-[85%] mx-auto flex justify-between items-center py-20 text-white h-[75%] md:h-[82vh] relative z-10'>
             <div className='md:pl-10 w-[100%] md:w-[60%]'>
             <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold`}>
                 Michael Yeng
