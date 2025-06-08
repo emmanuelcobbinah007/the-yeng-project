@@ -66,11 +66,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
+    <html lang="en">      <head>
         <meta name="theme-color" content="#2563eb" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="canonical" href="https://www.michaelyeng.com" />
+        {/* Preload critical resources for LCP optimization */}
+        <link rel="preload" href="/assets/images/HeroImg.jpg" as="image" type="image/jpeg" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className={`${poppins.variable} antialiased`}>
         {children}
