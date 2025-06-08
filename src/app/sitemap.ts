@@ -8,7 +8,8 @@ type SitemapEntry = {
 }
 
 export default function sitemap(): SitemapEntry[] {
-  const baseUrl = 'www.michaelyeng.com'
+  const baseUrl = 'https://www.michaelyeng.com'
+  
   // Static pages
   const staticPages = [
     {

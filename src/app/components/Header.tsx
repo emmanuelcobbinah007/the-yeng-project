@@ -24,9 +24,8 @@ const Header = () => {
     setAnimateModal(false);
     setTimeout(() => setter(false), 300);
   };
-
   return (
-    <div>
+    <header>
       {/* Banner Section */}
       <div className="bg-[#B51F2A] text-white">
         <div className="w-[85%] text-sm md:text-base mx-auto py-2 flex justify-center items-center font-extrabold">
@@ -36,10 +35,9 @@ const Header = () => {
 
       {/* Header Section */}
       <div className="bg-[#0F1F3D] text-white">
-        <div className="w-[85%] mx-auto py-4 flex justify-between items-center">
-          <Image
+        <div className="w-[85%] mx-auto py-4 flex justify-between items-center">          <Image
             src={logoWhite}
-            alt="logo"
+            alt="Michael Yeng for UGSRC President campaign logo"
             width={75}
             height={75}
             className="w-[50px] h-[50px] md:w-[75px] md:h-[75px]"
@@ -93,11 +91,10 @@ const Header = () => {
 
       {showMenuModal && (
         <MenuModal
-          handleClose={() => closeModal(setShowMenuModal)}
-          animateModal={animateModal}
+          handleClose={() => closeModal(setShowMenuModal)}        animateModal={animateModal}
         />
       )}
-    </div>
+    </header>
   );
 };
 

@@ -2,10 +2,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="the-man" className="bg-white py-20 px-6">
+    <section id="the-man" className="bg-white py-20 px-6" aria-labelledby="about-heading">
       <div className="md:w-[85%] mx-auto">
         <div className="max-w-4xl mx-auto relative text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6 text-center">
+          <h2 id="about-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6 text-center">
             Meet Michael Yeng
           </h2>
 

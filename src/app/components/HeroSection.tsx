@@ -11,7 +11,8 @@ import HeroImg from '../../../public/assets/images/HeroImg.jpg'
 
 const HeroSection = () => {
   return (
-    <div
+    <section
+        aria-label="Hero section featuring Michael Yeng"
         style={{
             backgroundImage: `url(${HeroImg.src})`,
             backgroundSize: 'cover',
@@ -46,10 +47,9 @@ const HeroSection = () => {
                 className="border border-white text-white font-semibold px-6 py-3 rounded-full flex justify-center items-center gap-2 hover:bg-white hover:text-[#0F1F3D] transition duration-300 text-xs md:text-lg w-[55%] md:w-[45%] mt-4 md:mt-6"
             >
                 Join the Movement
-            </a>
-            </div>
+            </a>        </div>
         </div>
-    </div>
+    </section>
   )
 }
 
